@@ -22,6 +22,7 @@
    [selmer "0.6.4"]
    [lib-noir "0.8.1"]
    [compojure "1.1.6"]
+   [clj-http "0.9.1"]
    [postgresql/postgresql "9.1-901.jdbc4"]]
   :ring
   {:handler hunt.handler/app,
