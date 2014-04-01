@@ -14,6 +14,12 @@ To start a web server for the application, run:
 
     lein ring server
 
+## Release History
+
+0.1 04/01/2014
+
+* Gravatar support
+
 ## License
 
 Copyright © 2014 FIXME
