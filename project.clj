@@ -23,6 +23,7 @@
    [lib-noir "0.8.1"]
    [compojure "1.1.6"]
    [clj-http "0.9.1"]
+   [environ "0.4.0"]
    [org.clojure/data.json "0.2.4"]
    [postgresql/postgresql "9.1-901.jdbc4"]]
   :ring

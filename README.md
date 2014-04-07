@@ -1,12 +1,14 @@
 # hunt
 
-FIXME
+This is my learn-Clojure project. It searches for a person by name and email address across various social media sites.
 
 ## Prerequisites
 
 You will need [Leiningen][1] 2.0 or above installed.
 
 [1]: https://github.com/technomancy/leiningen
+
+You need an About.me Client ID, which you can get from the About.me site. Set it as an environment variable called ABOUTME_CLIENT_ID.
 
 ## Running
 
