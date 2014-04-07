@@ -36,6 +36,14 @@
       </div>
     </div>
     {% endif %}
+
+    {% if aboutme %}
+    <div class="service">
+      <h2>About.me</h2>
+      <p>{{aboutme.bio}}</p>
+      <p><a href="{{aboutme.profile}}">{{aboutme.user_name}}</a></p>
+    </div>
+    {% endif %}
   </div>
 </div>
 {% endblock %}

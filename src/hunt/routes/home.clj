@@ -1,7 +1,8 @@
 (ns hunt.routes.home
   (:use compojure.core)
   (:require [hunt.views.layout :as layout]
-            [hunt.gravatar :as gravatar]))
+            [hunt.gravatar :as gravatar]
+            [hunt.aboutme :as aboutme]))
 
 (defn home-page [& [name email error]]
   (layout/render
@@ -9,6 +10,7 @@
                  :name name
                  :email email
                  :gravatar-img-url (gravatar/gravatar-img-url email)
+                 :aboutme (aboutme/aboutme email)
                  }))
 
 (defn about-page []
