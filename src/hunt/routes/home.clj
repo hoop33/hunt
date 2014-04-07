@@ -1,19 +1,16 @@
 (ns hunt.routes.home
   (:use compojure.core)
   (:require [hunt.views.layout :as layout]
-            [hunt.util :as util]
-            [clojure.string :as string]))
-
-(defn gravatar-img-url [email]
-  (if (nil? email) nil
-    (str "http://www.gravatar.com/avatar/" (util/md5 (string/trim (string/lower-case email))))))
+            [hunt.gravatar :as gravatar]
+            [hunt.aboutme :as aboutme]))
 
 (defn home-page [& [name email error]]
   (layout/render
     "home.html" {:error error
                  :name name
                  :email email
-                 :gravatar-img-url (gravatar-img-url email)
+                 :gravatar-img-url (gravatar/gravatar-img-url email)
+                 :aboutme (aboutme/aboutme email)
                  }))
 
 (defn about-page []
