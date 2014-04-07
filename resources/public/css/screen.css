@@ -4,3 +4,9 @@
   padding: 20px 10px;
   border-radius: 6px;
 }
+
+.service {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+

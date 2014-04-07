@@ -1,5 +1,6 @@
 (ns hunt.util
   (:require [noir.io :as io]
+            [clojure.edn :as edn]
             [markdown.core :as md]))
 
 (defn md->html
@@ -8,3 +9,19 @@
   (->>
     (io/slurp-resource filename)
     (md/md-to-html-string)))
+
+(defn md5
+  "Generate a md5 checksum for the given string"
+  [token]
+  (let [hash-bytes
+         (doto (java.security.MessageDigest/getInstance "MD5")
+               (.reset)
+               (.update (.getBytes token)))]
+       (.toString
+         (new java.math.BigInteger 1 (.digest hash-bytes)) ; Positive and the size of the number
+         16))) ; Use base16 i.e. hex
+
+(defn load-config 
+  "Load an edn configuration file"
+  [filename]
+  (edn/read-string (slurp filename)))

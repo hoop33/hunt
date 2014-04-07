@@ -20,6 +20,10 @@ To start a web server for the application, run:
 
 * Gravatar support
 
+0.2 04/07/2014
+
+* About.me support
+
 ## License
 
 Copyright © 2014 FIXME
