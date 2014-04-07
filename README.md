@@ -26,6 +26,10 @@ To start a web server for the application, run:
 
 * About.me support
 
+0.2.1 04/07/2014
+
+* Move About.me client ID from a configuration file to an environment variable for Heroku deployment
+
 ## License
 
 Copyright © 2014 FIXME
